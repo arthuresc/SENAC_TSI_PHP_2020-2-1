@@ -1,0 +1,4 @@
+input, intput:active, input:hover, input:focus, input:valid{
+    box-shadow: none;
+    border: none;
+}
