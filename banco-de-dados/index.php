@@ -46,4 +46,4 @@ echo '</ul>';
     echo "Não foi possivel apagar";
 } */
 
-echo "<br><br>Nome enviado: {$_POST['nome']}, telefone: {$_POST['tel']}";
+// echo "<br><br>Nome enviado: {$_POST['nome']}, telefone: {$_POST['tel']}";
