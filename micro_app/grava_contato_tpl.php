@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form class="form-group col-6 mx-auto bg-dark text-light p-5" action="./grava_contato.php">
+        <h2 class="text-center"> <?php echo $msg ?> </h2>
+        <label  for="nome">Nome</label>
+        <input type="text" class="form-control bg-dark text-light" name="nome" disabled>
+        <label for="nome">Telefone</label>
+        <input type="tel" class="form-control bg-dark text-light" name="telefone" disabled>
+        <button type="submit" class="btn btn-primary mt-3" disable>Submit</button>
+    </form>
+    <div>
+        <ul class="list-group d-flex flex-row flex-wrap col-8">
+            <?php
+            if ( is_array($tabela)){
+                foreach ($tabela as $id => $reg){
+                    echo "<li class='list-item-dark list-item p-1'> {$reg['nome']} </li>";
+                }
+            }
+            ?>
+        </ul>
+    </div>
+</body>
+
+</html>
