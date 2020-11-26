@@ -12,7 +12,6 @@ $erros = [];
 
 //Verifica se nome tem dois ou mais caracteres 
 if ( strlen($nome) < 2 ) {
-
 	$erros[] = 'O nome tem que ter ao menos dois caracteres';
 }
 

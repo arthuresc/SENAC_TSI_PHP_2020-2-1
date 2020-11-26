@@ -7,3 +7,5 @@
 	<a href=".SENAC_TSI_PHP_2020-2-1/login_db/usuario/view/lista.php">Usuários</a> 
 	<a href="./sair.php">Sair</a>
 </center>
+
+

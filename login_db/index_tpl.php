@@ -8,7 +8,7 @@
 			<table border="1">
 				<tr>
 					<td>
-						<form method="post" action="index.php">
+						<form method="post" action="./index.php">
 							<br>
 							<?php
 							if ( isset($msg) ) echo $msg;

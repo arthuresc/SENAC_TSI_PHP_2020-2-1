@@ -16,16 +16,19 @@ if ( isset($_SESSION['login']) ) { //Caso o usuário já esteja logado no sistem
 		include 'header_tpl.php';
 		include 'index_menu_tpl.php';
 		include 'footer_tpl.php';
+		echo var_dump($_SESSION['login']);
 
-} elseif ( isset( $_POST['entrar'] ) ) { //Caso o usuário tenha acabado de preencher o form de login
-
+} else if ( isset( $_POST['entrar'] ) ) { //Caso o usuário tenha acabado de preencher o form de login
+	
+	
 	$login = filter_var( $_POST['login'], FILTER_SANITIZE_EMAIL);
 	$senha = $_POST['senha'];
-
+	
 	//Verficar se existe o usuário e pegar o hash da senha
 	$r = $db->query("SELECT senha FROM usuario WHERE email = '$login'");
 	$reg = $r->fetch(PDO::FETCH_ASSOC);
 	$hash = $reg['senha'];
+	echo var_dump($_REQUEST['entrar']);
 
 	//Comprara a senha passada pelo usuário com o hash armazenado no DB
 	if ( password_verify( $senha, $hash) ) {
